@@ -42,7 +42,7 @@ rl.on('line', (line) => {
             const curr = edges[arr[j]] ?? new Set();
             for (let z = 0; z < j; z += 1) {
                 if (curr.has(arr[z])) {
-                    return topSort(arr);;
+                    return topSort(arr);
                 }
             }
         }
