@@ -34,9 +34,11 @@ rl.on('line', (line) => {
         return [rrr1, rrr2];
     };
     const arr = lines[0].split(', ');
+    for (let i = 0; i < arr.length; i += 1) {
+        max = Math.max(max, arr[i].length);
+    }
     const trr = [];
     for (let i = 2; i < lines.length; i += 1) {
-        max = Math.max(max, lines[i].length);
         trr.push(lines[i]);
     }
     const res = sol(arr, trr);
